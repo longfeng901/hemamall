@@ -1,0 +1,19 @@
+server:
+  port: 8084
+spring:
+  application:
+    name: searchservice
+  cloud:
+    nacos:
+      server-addr:  localhost:8848
+  rabbitmq:
+    host: ${RABBITMQ_HOST:localhost}
+    port: ${RABBITMQ_PORT:5672}
+    virtual-host: ${RABBITMQ_VHOST:/}
+    username: ${RABBITMQ_USERNAME:change-me}
+    password: ${RABBITMQ_PASSWORD:change-me}
+logging:
+  level:
+    cn.itcast:  debug
+  pattern:
+    dateformat:   MM-dd HH:mm:ss:SSS
